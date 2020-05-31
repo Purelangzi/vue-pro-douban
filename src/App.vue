@@ -1,13 +1,16 @@
 <template>
   <div id="app">
-    <div id="nav">
-      hello app!
-      hhhhhh
-      嗡瓦哇
-    </div>
+    <router-view></router-view>
     
   </div>
 </template>
 
 <style lang="scss">
 </style>
+
+<script>
+
+export default {
+ 
+}
+</script>
