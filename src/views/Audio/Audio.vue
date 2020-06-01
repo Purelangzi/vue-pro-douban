@@ -1,6 +1,5 @@
 <template>
     <div class="audio">
-        audio
         <Tabbar></Tabbar>
     </div>
 </template>

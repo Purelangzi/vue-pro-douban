@@ -1,6 +1,5 @@
 <template>
     <div class="group">
-        group!
         <Tabbar></Tabbar>
     </div>
 </template>

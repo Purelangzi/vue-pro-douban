@@ -1,6 +1,5 @@
 <template>
     <div class="broadcast">
-        broadcast
         <Tabbar></Tabbar>
     </div>
 </template>

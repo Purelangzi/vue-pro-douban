@@ -18,9 +18,7 @@
             }
         },
         methods: {
-            change(){ // 希望改变sel的值
-                // this.changeSelected(this.mark)
-                // this.$emit('changeSelected', this.mark)
+            change(){ 
                 this.$router.push('/'+this.mark)
             }
         }

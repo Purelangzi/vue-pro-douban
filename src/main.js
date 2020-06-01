@@ -6,6 +6,8 @@ import store from './store'
 Vue.config.productionTip = false
 // 加载通用样式
 import './stylesheets/main.scss'
+// 引入rem.js
+import './modules/rem'
 new Vue({
   router,
   store,
