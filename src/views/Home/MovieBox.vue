@@ -32,7 +32,6 @@ import {Toast} from 'mint-ui'
                 this.page = 1 // 请求第一页数据
                 this.hasMore = true // 有更多数据
                 this.getMovie() // 请求数据
-                
             }
         },
         methods: {
@@ -71,8 +70,12 @@ import {Toast} from 'mint-ui'
                 })
             }
         },
-        created() {
-            
+        activated() { // 组件显示时
+            this.loading = false
+        },
+        deactivated() { // 组件隐藏时
+            // 关闭无限滚动
+            this.loading = true
         },
         components:{
             MovieItem

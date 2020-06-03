@@ -80,7 +80,7 @@ import router from '@/router'
         width: 3.75rem;
         height: 50px;
         line-height: 50px;
-        background:rgba(0, 0, 0, .6);
+        background:rgba(0, 0, 0, .8);
         color: #fff;
         z-index: 10;
         i{

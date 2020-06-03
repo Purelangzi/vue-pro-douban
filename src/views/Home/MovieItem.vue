@@ -60,7 +60,6 @@
                 font-size: 16px;
                 font-weight: bold;
                 color: orange;
-
             }
             span{
                 display: block;
