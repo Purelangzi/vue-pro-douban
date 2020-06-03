@@ -32,9 +32,15 @@ module.exports = {
         port: 8080,
         https: false,
         hotOnly: false,
-        // proxy: {
-
-        // }, // 设置代理
+        proxy: { // 设置代理 
+            '/api':{ //暗号
+                target:'http://47.96.0.211:9000', //请求的域名
+                changeOrigin:true, //是否改变域名
+                pathRewrite:{
+                    '^/api':'' // 把/api开头的设置为空
+                }
+            }
+        }, 
         before: app => { }
     },
     // 第三方插件配置

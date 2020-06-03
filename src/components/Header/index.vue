@@ -20,9 +20,13 @@ import router from '@/router'
                 isShow:true
             }
         },
-        created() {
-            // 执行全局前置路由守卫
-            router.beforeEach((to,from,next)=>{
+        watch: {
+            $route(val){
+                this.changeRoute(val)
+            }
+        },
+        methods: {
+            changeRoute(to){
                 switch (to.name) {
                     case 'home':
                         this.icon = 'home'
@@ -53,6 +57,12 @@ import router from '@/router'
                         this.isShow = false
                     break;
                 }
+            }
+        },
+        created() {
+            // 执行全局前置路由守卫 路由切换时才会进入
+            router.beforeEach((to,from,next)=>{
+                this.changeRoute(to)
                 next()
             })
         }
@@ -63,12 +73,16 @@ import router from '@/router'
     .app-header{
         display: flex;
         justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
         padding: 0 .2rem;
         width: 3.75rem;
         height: 50px;
         line-height: 50px;
         background:rgba(0, 0, 0, .6);
         color: #fff;
+        z-index: 10;
         i{
             padding-right: 6px;
         }

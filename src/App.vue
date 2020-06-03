@@ -6,6 +6,9 @@
 </template>
 
 <style lang="scss">
+.swiper-pagination-bullet-active{
+        background: #fff;
+    }
 </style>
 
 <script>

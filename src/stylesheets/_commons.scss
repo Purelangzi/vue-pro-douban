@@ -5,7 +5,7 @@
     clear: both;
 }
 
-
-// button{
-//     @include border-radius;
-// }
+.loading{
+    background: url(../assets/loading.gif) no-repeat center;
+    height: 2.7rem;
+}

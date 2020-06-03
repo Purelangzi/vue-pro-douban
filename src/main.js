@@ -8,6 +8,16 @@ Vue.config.productionTip = false
 import './stylesheets/main.scss'
 // 引入rem.js
 import './modules/rem'
+// 引入swiper.min.css样式文件
+import '../node_modules/swiper/css/swiper.min.css'
+
+import axios from 'axios'
+Vue.prototype.$axios = axios // 方便以后在组件中通过this.$axios获取axios
+
+// 引入mint-ui组件库里面需要的一些组件
+import { InfiniteScroll } from 'mint-ui';
+Vue.use(InfiniteScroll);
+
 new Vue({
   router,
   store,
