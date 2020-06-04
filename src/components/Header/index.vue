@@ -5,7 +5,7 @@
             <span>豆瓣{{title}}</span>
         </div>
         <div class="right">
-            <span>城市</span>
+            <span v-backtop:click>城市</span>
         </div>
     </div>
 </template>

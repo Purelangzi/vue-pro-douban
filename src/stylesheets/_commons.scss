@@ -1,6 +1,10 @@
-
-.clearfix::after{
+.clearfix::after {
     content: "";
     display: block;
     clear: both;
+}
+
+.loading {
+    background: url('../assets/loading.gif') no-repeat center;
+    height: 2.4rem;
 }

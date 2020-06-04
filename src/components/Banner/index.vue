@@ -1,12 +1,14 @@
 <template>
     <div class="home-banner swiper-container">
         <div class="swiper-wrapper">
-            <div class="swiper-slide"
+            <router-link class="swiper-slide"
                 v-for="banner in banners"
                 :key="banner.id"
+                tag="div"
+                :to="{name:'moviedetail',params:{id:banner.id}}"
             >
                 <img :src="banner.images.small">
-            </div>
+            </router-link>
         </div>
         <div class="swiper-pagination"></div>
     </div>
@@ -48,7 +50,7 @@
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
     .home-banner{
         height: 2.2rem;
         img{
@@ -56,5 +58,7 @@
             height: 100%;
         }
     }
-    
+    .mint-header{
+        background-color: #7a94a7;
+    }
 </style>

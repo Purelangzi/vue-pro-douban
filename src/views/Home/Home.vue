@@ -14,6 +14,7 @@
         <div :class="{fixbox:isFixed}">
             <MovieBox :type="type"></MovieBox>
         </div>
+        <Backtop></Backtop>
         <Tabbar></Tabbar>
     </div>
 </template>
@@ -22,6 +23,7 @@
     import Tabbar from '@/components/Tabbar'
     import Banner from '@/components/Banner'
     import MovieBox from './MovieBox'
+    import  Backtop from './Backtop'
     export default {
         name:'home',
         data() {
@@ -31,13 +33,15 @@
                     {id:1,title:'正在热映',type:'in_theaters'},
                     {id:2,title:'即将上映',type:'coming_soon'},
                 ],
-                isFixed:false
+                isFixed:false,
+                dis:0
             }
         },
         components:{
             Tabbar,
             Banner,
-            MovieBox
+            MovieBox,
+            Backtop
         },
         methods: {
             handelEvent(e){
@@ -49,12 +53,18 @@
                 }
             }
         },
-        activated() {
+        activated() { // 组件显示时
             window.addEventListener('scroll',this.handelEvent)
+            window.scrollTo(0,this.dis)
         },
-        deactivated() {
+        deactivated() { // 组件隐藏时
             window.removeEventListener('scroll',this.handelEvent)
             this.isFixed = false // 关闭固定定位样式
+        },
+        beforeRouteLeave (to, from, next) { // 当前组件对应的路由离开时
+            let dis = document.documentElement.scrollTop || document.body.scrollTop
+            this.dis = dis // 记录当前滚动的距离
+            next()
         }
     }
 </script>

@@ -1,5 +1,9 @@
 <template>
-    <div class="movieitem">
+    <router-link
+        class="movieitem"
+        tag="div"
+        :to="{name:'moviedetail',params:{id:movie.id}}"
+     >
         <div class="img-box">
             <img width="100%" :src="movie.images.small" :onerror="errorImg">
         </div>
@@ -13,7 +17,7 @@
                 <span>评分：</span><div class="rating">{{movie.rating.average}}</div>
             </div>
         </div>
-    </div>
+    </router-link>
 </template>
 
 <script>
