@@ -1,5 +1,11 @@
-# vue-pro
+# vue-douban
 
+本项目是使用vue-cli4.x脚手架搭建项目
+使用到vue,vue-router,vuex
+UI框架：Mint-ui
+字体图标库：Font Awesome
+
+项目已完成首页部分，而我的页面是购物车（vuex状态管理）
 ## Project setup
 ```
 npm install
