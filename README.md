@@ -1,7 +1,7 @@
 # vue-douban
 Webapp项目仿豆瓣
 本项目是使用vue-cli4.x脚手架搭建项目
-使用到vue,vue-router,vuex,axios
+使用到vue2.x + vue-router + vuex + axios
 UI框架：Mint-ui
 字体图标库：Font Awesome
 
